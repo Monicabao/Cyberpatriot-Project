@@ -13,7 +13,8 @@ done
 USERS="$ADMINISTATORS $AUTHORIZEDUSERS"
 echo "$USERS"
 
-#changes insecure passwords + Make sure everyone has passwords
+#changes insecure passwords + Creates passwords for everyone
 for val in $USERS; do
-    echo "$val:itsgonnaworkthistimetrust!!" | sudo chpasswd
+    sudo echo -e "BROPLEASEBROPLEAAAASSEEE!!\nBROPLEASEBROPLEAAAASSEEE!!" | sudo passwd $val
 done
+
