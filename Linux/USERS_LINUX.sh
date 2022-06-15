@@ -10,14 +10,10 @@ for val in $AUTHORIZEDUSERS; do
 done
 
 #Creates a "users" masterlist
-USERS=""
-for val in $ADMINISTRATORS 'ipsum' $AUTHORIZEDUSERS 'sit amet' 10
-do
- USERS+="$val"
- echo "$USERS"
-done
+USERS="$ADMINISTATORS $AUTHORIZEDUSERS"
+echo "$USERS"
 
-#changes insecure passwords
+#changes insecure passwords + Make sure everyone has passwords
 for val in $USERS; do
-    sudo passwd $val (Imactuallycrackedatprogramming!1)
+    echo "$val:itsgonnaworkthistimetrust!!" | sudo chpasswd
 done
