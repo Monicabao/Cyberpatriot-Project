@@ -1,4 +1,4 @@
 #take input of the users list
-echo "Copy and paste the users list"
-read USERS
+echo "Copy and paste the administrators list"
+read ADMINISTRATORS
 
