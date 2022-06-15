@@ -7,6 +7,7 @@ echo.
 echo Delete a user
 echo Add a user
 echo.
+echo.
 REM request user for an input
 set /p "option=Enter what you want to do (add/delete):"
 if %option% == add goto :Export
