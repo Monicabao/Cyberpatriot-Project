@@ -1,4 +1,4 @@
-'#Decide administrators
+#Decide administrators
 echo "Who are the users in administrators?";read ADMINISTRATORS
 for val in $ADMINISTRATORS; do
     sudo usermod -aG sudo $val
@@ -9,22 +9,15 @@ for val in $AUTHORIZEDUSERS; do
     sudo gpasswd -d $val sudo
 done
 
-#Delete unauthorizes users
+#Creates a "users" masterlist
 USERS=""
 for val in $ADMINISTRATORS 'ipsum' $AUTHORIZEDUSERS 'sit amet' 10
 do
  USERS+="$val"
-done'
-
-#Add user function
-add_users() {
-read -p "Do you want to add users? (Y/n): " DECISION
-while [ $DECISION == "y" ];
-do 
-  read -p "What's the name of user you would like to add: " name 
-  sudo useradd $name
-  sudo mkdir /home/$name 
-  echo "User $name created"
-  read -p "add users? (Y/n): " DECISION
+ echo "$USERS"
 done
-}
+
+#changes insecure passwords
+for val in $USERS; do
+    sudo passwd $val (Imactuallycrackedatprogramming!1)
+done
