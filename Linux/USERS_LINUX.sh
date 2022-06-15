@@ -18,3 +18,9 @@ for val in $USERS; do
     sudo echo -e "BROPLEASEBROPLEAAAASSEEE!!\nBROPLEASEBROPLEAAAASSEEE!!" | sudo passwd $val
 done
 
+#Remove unwanted users
+SYSUSERS="cut -d: -f1 /etc/passwd"
+#changes insecure passwords + Creates passwords for everyone
+for val in $USERS; do
+    sudo deluser 
+done
